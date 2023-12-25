@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "browserslist": [
+    "> 1%",
+    "last 3 versions",
+    "ie >= 11",
+    "android >= 4.2",
+    "ios >= 9"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "gulp-debug": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cdnify": "^1.0.8",
+    "gulp-fingerprint": "^1.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-format": "^1.0.5",
+    "is-relative-url": "^3.0.0",
+    "istextorbinary": "^3.3.0",
+    "replacestream": "^4.0.3"
+  }
+}

@@ -1,0 +1,69 @@
+version: '2'
+services:
+
+  test:
+    build: .
+    volumes:
+      - /home/admin/htdocs/WWW_ROOT:/data
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+    command: gulp test
+    user: "${LOCAL_UID}:${LOCAL_GID}"
+    environment:
+      - URL_PREFIX=//exmple.com/
+
+
+  since:
+    build: .
+    volumes:
+      - /home/admin/Projects/tringle/docker-cdnify/since:/data
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+    command: gulp since
+    user: "${LOCAL_UID}:${LOCAL_GID}"
+    environment:
+      - URL_PREFIX=//exmple.com/
+
+  rev:
+    build: .
+    volumes:
+      - /home/admin/htdocs/test:/data
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+    command: gulp rev
+    user: "${LOCAL_UID}:${LOCAL_GID}"
+    environment:
+      - URL_PREFIX=//exmple.com/
+
+  absolute:
+    build: .
+    volumes:
+      - /home/admin/htdocs/test:/data
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    user: "${LOCAL_UID}:${LOCAL_GID}"
+    command: gulp absolute
+    environment:
+      - URL_PREFIX=//exmple.com/
+
+  fingerprint:
+    build: .
+    volumes:
+      - /home/admin/htdocs/test:/data
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    user: "${LOCAL_UID}:${LOCAL_GID}"
+    command: gulp fingerprint
+    environment:
+      - URL_PREFIX=//exmple.com/
+
+  cdnify:
+    build: .
+    volumes:
+      - /home/admin/htdocs/test:/data
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    user: "${LOCAL_UID}:${LOCAL_GID}"
+    command: gulp cdnify
+    environment:
+      - URL_PREFIX=//exmple.com/
