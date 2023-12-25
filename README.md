@@ -14,4 +14,4 @@ $ LOCAL_UID=$(id -u $USER) LOCAL_GID=$(id -g $USER) docker-compose run rev
 $ LOCAL_UID=$(id -u $USER) LOCAL_GID=$(id -g $USER) docker-compose run absolute
 $ LOCAL_UID=$(id -u $USER) LOCAL_GID=$(id -g $USER) docker-compose run fingerprint
 $ LOCAL_UID=$(id -u $USER) LOCAL_GID=$(id -g $USER) docker-compose run cdnify
-```
+```# GSAS
